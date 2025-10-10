@@ -15,46 +15,6 @@ from matplotlib.lines import Line2D
 import matplotlib.dates as mdates
 # --- Consistent variable naming + palette helpers ---
 
-def build_global_heatbalance_colormap(long_df: pd.DataFrame) -> dict[str, tuple]:
-    """
-    Build a consistent red/blue/purple color mapping for all variables across all plots.
-    Each variable's color family (R/B/P) depends on its overall sign pattern in the dataset.
-    """
-    from matplotlib import cm
-    import numpy as np
-
-    if "Variable" not in long_df.columns or "Value" not in long_df.columns:
-        raise ValueError("long_df must contain 'Variable' and 'Value' columns.")
-
-    # 1) Determine sign behavior for each variable across all data
-    summary = (long_df.groupby("Variable")["Value"]
-               .agg(["min", "max", "mean"])
-               .reset_index())
-    summary["sign_type"] = np.select(
-        [
-            (summary["min"] < 0) & (summary["max"] > 0),
-            (summary["mean"] >= 0),
-        ],
-        ["bidir", "gain"],
-        default="loss"
-    )
-
-    # 2) Assign colors deterministically
-    gains  = summary.query("sign_type == 'gain'")["Variable"].sort_values().tolist()
-    losses = summary.query("sign_type == 'loss'")["Variable"].sort_values().tolist()
-    bidir  = summary.query("sign_type == 'bidir'")["Variable"].sort_values().tolist()
-
-    reds    = cm.get_cmap("Reds",    len(gains) + 2)
-    blues   = cm.get_cmap("Blues",   len(losses) + 2)
-    purples = cm.get_cmap("Purples", len(bidir)  + 2)
-
-    cmap = {}
-    for i, v in enumerate(gains):   cmap[v]  = reds(i + 1)
-    for i, v in enumerate(losses):  cmap[v]  = blues(i + 1)
-    for i, v in enumerate(bidir):   cmap[v]  = purples(i + 1)
-
-    return cmap
-
 
 # ---------------------- Parsing & Loading ----------------------
 
@@ -390,6 +350,19 @@ def _snap_up(value: float, step: float = 2.5) -> float:
     return np.ceil(value / step) * step
 
 
+
+def _snap_up(value: float, step: float = 2.5) -> float:
+    import numpy as np
+    if value is None or not np.isfinite(value) or value <= 0:
+        return step
+    return np.ceil(value / step) * step
+
+def clean_var_name(v: str) -> str:
+    v = str(v)
+    v = v.replace("Zone Air Heat Balance ", "")
+    v = v.replace(" Rate [W](Hourly)", "")
+    return v.strip()
+
 def plot_heat_balance(
     df,
     scale="monthly",
@@ -398,23 +371,14 @@ def plot_heat_balance(
     per_m2=False,
     title_suffix="",
     ylim_abs=None,
-    global_color_map: dict[str, tuple] | None = None  # NEW: consistent colors across plots
+    fixed_color_map: dict[str, tuple | str] | None = None,   # REQUIRED for fixed colors
+    strict_colors: bool = True,   # True: raise if a variable color is missing; False: fallback gray
 ):
-    """
-    Heat-balance stacked bar chart with fixed color "scenarios":
-      - Reds   = gains (positive-only)
-      - Blues  = losses (negative-only)
-      - Purple = bidirectional (both + and -)
-    Net Total line is removed.
-    Y axis is symmetric and snapped to the nearest UP multiple of 2.5 that covers stacks.
-    """
-    import matplotlib.pyplot as plt
     import numpy as np
-    from matplotlib import cm
+    import matplotlib.pyplot as plt
     import matplotlib.dates as mdates
     from matplotlib.patches import Patch
 
-    # --- Styling ---
     plt.rcParams.update({
         'font.family': 'Arial',
         'font.size': 14,
@@ -428,7 +392,7 @@ def plot_heat_balance(
 
     scale = scale.lower()
     time_key = "Month" if scale == "monthly" else "Year"
-    value_col = "Value_per_m2" if (per_m2 and "Value_per_m2" in df.columns) else "Value"
+    vcol = "Value_per_m2" if (per_m2 and "Value_per_m2" in df.columns) else "Value"
 
     df = df.copy()
     if time_key == "Month":
@@ -438,131 +402,58 @@ def plot_heat_balance(
         df[time_key] = pd.to_datetime(df[time_key].astype(str) + "-01-01")
         bar_width = 120
 
-    # --- Build tidy pivot ---
-    pivot_df = df.pivot_table(index=time_key, columns="Variable", values=value_col, aggfunc="sum").fillna(0)
-    pivot_df = pivot_df.sort_index()
+    # pivot and CLEAN names to match your dict keys
+    piv = (df.pivot_table(index=time_key, columns="Variable", values=vcol, aggfunc="sum")
+             .fillna(0)
+             .sort_index())
+    piv.columns = [clean_var_name(c) for c in piv.columns]
 
-    # --- Clean variable names for nicer legend labels ---
-    def clean_name(v):
-        v = v.replace("Zone Air Heat Balance ", "")
-        v = v.replace(" Rate [W](Hourly)", "")
-        return v.strip()
+    # color lookup: ONLY from fixed_color_map
+    if fixed_color_map is None:
+        raise ValueError("fixed_color_map is required when strict colors are requested.")
+    colors = dict(fixed_color_map)
+    missing = [c for c in piv.columns if c not in colors]
+    if missing and strict_colors:
+        raise KeyError(f"Missing colors for variables: {missing}")
+    fallback = "#bdbdbd"  # neutral gray
+    color_of = lambda name: colors.get(name, fallback)
 
-    rename_map = {v: clean_name(v) for v in pivot_df.columns}
-    pivot_df.rename(columns=rename_map, inplace=True)
-
-    # --- Classify variables (for stacking and color "families") ---
-    # classify variables by sign on the CLEANED column names
-    var_state = {}
-    for v in pivot_df.columns:
-        vals = pivot_df[v]
-        has_pos = (vals > 0).any()
-        has_neg = (vals < 0).any()
-        if has_pos and has_neg:
-            var_state[v] = "bidir"
-        elif vals.mean() >= 0:
-            var_state[v] = "gain"
-        else:
-            var_state[v] = "loss"
-
-    gains  = sorted([v for v, t in var_state.items() if t == "gain"])
-    losses = sorted([v for v, t in var_state.items() if t == "loss"])
-    bidir  = sorted([v for v, t in var_state.items() if t == "bidir"])
-
-    # ---- Color selection
-    if global_color_map is not None:
-        # 1) ensure global map uses cleaned keys
-        #    (if your global builder returns raw names, map them through clean_name first)
-        # global_color_map = { clean_name(k): c for k, c in global_color_map.items() }
-
-        color_map = dict(global_color_map)  # copy
-        # 2) fill any missing variables deterministically, preserving R/B/P families
-        missing_g = [v for v in gains  if v not in color_map]
-        missing_l = [v for v in losses if v not in color_map]
-        missing_b = [v for v in bidir  if v not in color_map]
-
-        if missing_g or missing_l or missing_b:
-            from matplotlib import cm
-            if missing_g:
-                reds = cm.get_cmap("Reds", len(missing_g) + 2)
-                for i, v in enumerate(missing_g):
-                    color_map[v] = reds(i + 1)
-            if missing_l:
-                blues = cm.get_cmap("Blues", len(missing_l) + 2)
-                for i, v in enumerate(missing_l):
-                    color_map[v] = blues(i + 1)
-            if missing_b:
-                purples = cm.get_cmap("Purples", len(missing_b) + 2)
-                for i, v in enumerate(missing_b):
-                    color_map[v] = purples(i + 1)
-    else:
-        # local fallback: consistent families within THIS plot
-        from matplotlib import cm
-        reds    = cm.get_cmap("Reds",    len(gains)  + 2)
-        blues   = cm.get_cmap("Blues",   len(losses) + 2)
-        purples = cm.get_cmap("Purples", len(bidir)  + 2)
-
-        color_map = {}
-        for i, v in enumerate(gains):   color_map[v] = reds(i + 1)
-        for i, v in enumerate(losses):  color_map[v] = blues(i + 1)
-        for i, v in enumerate(bidir):   color_map[v] = purples(i + 1)
-
-
-    # --- Positive / Negative parts for stacking ---
-    pos_df = pivot_df.clip(lower=0)
-    neg_df = pivot_df.clip(upper=0)
+    # sign-based stacking (geometry only; no color inference)
+    pos = piv.clip(lower=0)
+    neg = piv.clip(upper=0)
 
     fig, ax = plt.subplots(figsize=(14, 8))
 
-    # --- Draw order: gains → bidir (top); bidir → losses (bottom) ---
-    bottom = np.zeros(len(pos_df))
-    for v in sorted(gains):
-        if np.any(pos_df[v] != 0):
-            ax.bar(pos_df.index, pos_df[v], width=bar_width, bottom=bottom,
-                   color=color_map[v], label=v)
-            bottom += pos_df[v]
-    for v in sorted(bidir):
-        if np.any(pos_df[v] != 0):
-            ax.bar(pos_df.index, pos_df[v], width=bar_width, bottom=bottom,
-                   color=color_map[v], label=v)
-            bottom += pos_df[v]
+    # order legend/stack deterministically by column name
+    cols = sorted(piv.columns)
 
-    bottom = np.zeros(len(neg_df))
-    for v in sorted(bidir):
-        if np.any(neg_df[v] != 0):
-            ax.bar(neg_df.index, neg_df[v], width=bar_width, bottom=bottom,
-                   color=color_map[v], label=v)
-            bottom += neg_df[v]
-    for v in sorted(losses):
-        if np.any(neg_df[v] != 0):
-            ax.bar(neg_df.index, neg_df[v], width=bar_width, bottom=bottom,
-                   color=color_map[v], label=v)
-            bottom += neg_df[v]
+    # positive stack
+    bottom = np.zeros(len(pos))
+    for v in cols:
+        vals = pos[v].values
+        if np.any(vals != 0):
+            ax.bar(pos.index, vals, width=bar_width, bottom=bottom, color=color_of(v), label=v)
+            bottom += vals
 
-    # --- Axes styling ---
-    ax.axhline(0, color="black", linewidth=1.5)
-    ttl_units = f"{units}/m²" if per_m2 else units
-    title_core = f"Heat Balance — {scale.capitalize()} ({str(scope).capitalize()})"
-    ax.set_title(f"{title_core} [{ttl_units}] {title_suffix}".strip())
-    ax.set_xlabel(scale.capitalize())
-    ax.set_ylabel(f"Total Energy [{ttl_units}]")
-    ax.grid(True, linestyle="--", alpha=0.5)
+    # negative stack
+    bottom = np.zeros(len(neg))
+    for v in cols:
+        vals = neg[v].values
+        if np.any(vals != 0):
+            ax.bar(neg.index, vals, width=bar_width, bottom=bottom, color=color_of(v), label=v)
+            bottom += vals
 
-    # --- Symmetric Y with snapping to 2.5 multiples ---
-    # Compute required coverage from actual stack totals (top of positive stack, bottom of negative stack)
-    pos_stack_top = (pos_df.sum(axis=1).max() if not pos_df.empty else 0.0) or 0.0
-    neg_stack_bot = (neg_df.sum(axis=1).min() if not neg_df.empty else 0.0) or 0.0
-    max_abs_needed = max(abs(pos_stack_top), abs(neg_stack_bot))
+    # symmetric y-axis snapped to 2.5 multiples
+    pos_top = pos.sum(axis=1).max() if not pos.empty else 0.0
+    neg_bot = neg.sum(axis=1).min() if not neg.empty else 0.0
+    needed = max(abs(pos_top), abs(neg_bot))
+    target = float(ylim_abs) if (ylim_abs is not None) else needed
+    y = _snap_up(target, 2.5)
+    if y == 0: y = 2.5
+    ax.set_ylim(-y, y)
+    ax.axhline(0, color="black", lw=1.5)
 
-    # If user provided ylim_abs, still snap it UP to the nearest 2.5 multiple;
-    # else compute from data and snap.
-    target = ylim_abs if (ylim_abs is not None) else max_abs_needed
-    snapped = _snap_up(float(target), step=2.5)
-    if snapped == 0:
-        snapped = 2.5
-    ax.set_ylim(-snapped, snapped)
-
-    # --- X-axis ticks ---
+    # ticks/labels
     if scale == "yearly":
         ax.xaxis.set_major_locator(mdates.YearLocator(base=1))
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
@@ -571,18 +462,149 @@ def plot_heat_balance(
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right")
 
-    # --- Legend (variables only; NO net total) ---
-    vars_list = list(pivot_df.columns)
-    var_handles = [Patch(facecolor=color_map[v], label=v) for v in vars_list]
-    fig.legend(
-        handles=var_handles,
-        labels=[h.get_label() for h in var_handles],
-        loc="upper left",
-        bbox_to_anchor=(1.02, 1.0),
-        borderaxespad=0.0,
-        frameon=False,
-        ncol=1
-    )
+    ttl_units = f"{units}/m²" if per_m2 else units
+    ax.set_title(f"Heat Balance — {scale.capitalize()} ({str(scope).capitalize()}) [{ttl_units}] {title_suffix}".strip())
+    ax.set_xlabel(scale.capitalize()); ax.set_ylabel(f"Total Energy [{ttl_units}]")
+    ax.grid(True, linestyle="--", alpha=0.5)
 
+    # legend (variables only; order = sorted cols)
+    handles = [Patch(facecolor=color_of(v), label=v) for v in cols]
+    fig.legend(handles=handles, loc="upper left", bbox_to_anchor=(1.02, 1.0), frameon=False)
     plt.tight_layout(rect=[0, 0, 0.78, 1])
+    plt.show()
+
+def _to_month_period(x):
+    import pandas as pd
+    if isinstance(x, pd.Period):
+        return x.asfreq("M")
+    return pd.Period(pd.to_datetime(str(x)).strftime("%Y-%m-01"), freq="M")
+
+def plot_month_compare_across_building_and_floors(
+    aggs,
+    long_df,
+    floors,
+    months=None,                  # accepts None, list of Period/Timestamp/str
+    units="kWh",
+    per_m2=True,
+    fixed_color_map=None,         # or global_color_map; keys = CLEANED names
+    strict_colors=True,
+    title="Heat Balance — Building & Floors (Monthly)",
+    floor_labeler=None            # e.g., lambda f: f"{int(f)}F" if f>=0 else f"B{abs(int(f))}F"
+):
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    from matplotlib.patches import Patch
+
+    if fixed_color_map is None:
+        raise ValueError("Provide fixed_color_map/global_color_map with cleaned variable names.")
+
+    # --- normalize Month to Period('M') everywhere ---
+    if "Month" in long_df.columns and not isinstance(long_df["Month"].dtype, pd.PeriodDtype):
+        long_df = long_df.copy()
+        long_df["Month"] = long_df["Month"].apply(_to_month_period)
+
+    # derive months from data if not supplied
+    if months is None:
+        months = list(pd.Index(long_df["Month"].dropna().unique()).sort_values())
+    else:
+        months = [_to_month_period(m) for m in months]
+
+    # default floor labeler
+    if floor_labeler is None:
+        def floor_labeler(f):
+            f = int(f)
+            return f"{f}F" if f >= 0 else f"B{abs(f)}F"
+
+    # collect building + floors
+    frames = []
+    b = get_df(aggs, scale="monthly", scope="building", units=units, per_m2=per_m2, long_df_for_area=long_df)
+    if "Month" in b and not isinstance(b["Month"].dtype, pd.PeriodDtype):
+        b["Month"] = b["Month"].apply(_to_month_period)
+    b["Entity"] = "Building"
+    frames.append(b)
+
+    for f in floors:
+        df_f = get_df(aggs, scale="monthly", scope="floor", floor=f, units=units, per_m2=per_m2, long_df_for_area=long_df)
+        if df_f.empty:
+            continue
+        if "Month" in df_f and not isinstance(df_f["Month"].dtype, pd.PeriodDtype):
+            df_f["Month"] = df_f["Month"].apply(_to_month_period)
+        df_f["Entity"] = floor_labeler(f)
+        frames.append(df_f)
+
+    if not frames:
+        print("No data to plot.")
+        return
+
+    all_df = pd.concat(frames, ignore_index=True)
+    all_df = all_df[all_df["Month"].isin(months)]
+
+    # choose value column
+    vcol = "Value_per_m2" if per_m2 and "Value_per_m2" in all_df.columns else "Value"
+
+    # pivot to compute common symmetric y
+    piv_all = (all_df.pivot_table(index=["Month","Entity"], columns="Variable", values=vcol, aggfunc="sum")
+                      .fillna(0.0))
+    # clean variable names to match your color dict keys
+    piv_all.columns = [clean_var_name(c) for c in piv_all.columns]
+
+    pos_top = piv_all.clip(lower=0).sum(axis=1).max()
+    neg_bot = piv_all.clip(upper=0).sum(axis=1).min()
+    from math import ceil
+    step = 2.5
+    ymax = step if (pos_top==neg_bot==0) else ceil(max(abs(pos_top), abs(neg_bot))/step)*step
+
+    # layout
+    ncol = min(4, max(1, len(months)))
+    nrow = int(np.ceil(len(months)/ncol))
+    fig, axes = plt.subplots(nrow, ncol, figsize=(6*ncol, 4.8*nrow), squeeze=False)
+    ttl_units = f"{units}/m²" if per_m2 else units
+    fig.suptitle(f"{title} [{ttl_units}]", fontsize=18, y=0.98)
+
+    # plot each month
+    for i, m in enumerate(months):
+        ax = axes[i//ncol][i % ncol]
+        if m not in piv_all.index.get_level_values(0):
+            ax.set_visible(False); continue
+
+        sub = piv_all.xs(m, level=0)  # DataFrame indexed by Entity
+        # Building first, then floors in alphanumeric order
+        sub = sub.reindex(["Building"] + sorted([e for e in sub.index if e!="Building"]))
+
+        cols = sorted(sub.columns)  # deterministic legend order
+
+        # color lookup
+        missing = [c for c in cols if c not in fixed_color_map]
+        if missing and strict_colors:
+            raise KeyError(f"Missing colors for variables: {missing}")
+        color_of = lambda name: fixed_color_map.get(name, "#bdbdbd")
+
+        # stacks
+        pos = sub.clip(lower=0)
+        neg = sub.clip(upper=0)
+        x = np.arange(len(sub.index)); width = 0.62
+
+        bottom = np.zeros(len(sub))
+        for v in cols:
+            vals = pos[v].values
+            if np.any(vals != 0): ax.bar(x, vals, width, bottom=bottom, color=color_of(v))
+            bottom += vals
+        bottom = np.zeros(len(sub))
+        for v in cols:
+            vals = neg[v].values
+            if np.any(vals != 0): ax.bar(x, vals, width, bottom=bottom, color=color_of(v))
+            bottom += vals
+
+        ax.axhline(0, color="black", lw=1)
+        ax.set_ylim(-ymax, ymax)
+        ax.set_xticks(x, sub.index, rotation=0)
+        ax.set_title(str(m)); ax.grid(True, linestyle="--", alpha=0.4)
+        ax.set_ylabel(ttl_units)
+
+    # one legend
+    from matplotlib.patches import Patch
+    handles = [Patch(facecolor=fixed_color_map.get(c, "#bdbdbd"), label=c) for c in sorted(piv_all.columns)]
+    fig.legend(handles=handles, loc="center right", bbox_to_anchor=(0.99, 0.5), frameon=False)
+    plt.tight_layout(rect=[0,0,0.92,0.95])
     plt.show()
