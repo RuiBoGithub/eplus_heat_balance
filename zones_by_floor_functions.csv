@@ -1,0 +1,54 @@
+floor_primary,function,zone
+-1,1,Zone9Store_1_3dc8fc5a
+-1,1circulation,Zone4-1Circulation_1_e82edbf8
+-1,2,Zone9Store_2_c4181ca9
+-1,2staircase,Zone4-2Staircase_1_4e85f66c
+-1,Equipment,Zone6_Equipment_3_7e7e26eb
+0,1circulation,Zone4-1Circulation_2_13f3e761
+0,2,"Zone1-2_Cafe_c7957808, Zone3-2_OpenOffice2_18_023be777"
+0,2seminar,Zone2-2Seminar_cf5486a5
+0,2staircase,"Zone4-2Staircase_11_ff8442a8, Zone4-2Staircase_2_e9271640"
+0,3,Zone3-3_Lab_64217277
+0,6,Zone7Shaft_6_b5d4b2ca
+0,Atrium,Zone1-1_Atrium_122d7807
+0,Rrooms,"Zone5_RRooms_1_d65962a1, Zone5_RRooms_7_2cc705e3"
+0,Vrf,Zone8_VRF_6_e5e72533
+1,1,Zone3-1_OpenOffice_1_e23a20b5
+1,1circulation,"Zone4-1Circulation_3_33a17480, Zone4-1Circulation_4_601671ab, Zone4-1Circulation_5_5ff61401"
+1,2,"Zone3-2_OpenOffice2_19_e16d8b26, Zone3-2_OpenOffice2_1_18fcf4b9, Zone3-2_OpenOffice2_2_f1d0b43f, Zone3-2_OpenOffice2_3_21d2f444"
+1,2staircase,"Zone4-2Staircase_3_67e8ed9f, Zone4-2Staircase_4_b5ef8d6d"
+1,5,Zone7Shaft_5_96f3a560
+1,Meeting,"Zone2-1_Meeting_18_1e5af8b8, Zone2-1_Meeting_19_d9b0642b, Zone2-1_Meeting_1_e96557e9, Zone2-1_Meeting_20_d4b1829c"
+1,Rrooms,Zone5_RRooms_6_56a954c5
+1,Vrf,Zone8_VRF_5_1101935f
+2,1,Zone3-1_OpenOffice_5_829013a0
+2,1circulation,"Zone4-1Circulation_14_c6db0fe0, Zone4-1Circulation_15_ad90b414, Zone4-1Circulation_16_20c91130"
+2,2,"Zone3-2_OpenOffice2_14_cac02eac, Zone3-2_OpenOffice2_15_155377f7, Zone3-2_OpenOffice2_16_56c6356b, Zone3-2_OpenOffice2_17_0fa94f44"
+2,2staircase,"Zone4-2Staircase_10_91695446, Zone4-2Staircase_9_e8a1c465"
+2,4,Zone7Shaft_4_3e22cd32
+2,Meeting,"Zone2-1_Meeting_15_0b11bc6a, Zone2-1_Meeting_16_44274e7f, Zone2-1_Meeting_17_f7bc9090, Zone2-1_Meeting_5_eee6df9f"
+2,Rrooms,Zone5_RRooms_5_7b78a6d6
+2,Vrf,Zone8_VRF_4_f441c7bd
+3,1,Zone3-1_OpenOffice_4_abf302ae
+3,1circulation,"Zone4-1Circulation_11_7cbae69e, Zone4-1Circulation_12_c8da6dbc, Zone4-1Circulation_13_1c16e6b3"
+3,2,"Zone3-2_OpenOffice2_10_13d49953, Zone3-2_OpenOffice2_11_c9cec76a, Zone3-2_OpenOffice2_12_1d1a52e6, Zone3-2_OpenOffice2_13_9bcf5226"
+3,2staircase,"Zone4-2Staircase_7_8db447d9, Zone4-2Staircase_8_eadc509c"
+3,3,Zone7Shaft_3_5bad4521
+3,Meeting,"Zone2-1_Meeting_12_f3147a16, Zone2-1_Meeting_13_688c01b5, Zone2-1_Meeting_14_6570d168, Zone2-1_Meeting_4_de06e8ce"
+3,Rrooms,Zone5_RRooms_4_c8dfcaae
+3,Vrf,Zone8_VRF_3_76c30c75
+4,1,Zone3-1_OpenOffice_3_350f4c8c
+4,1circulation,"Zone4-1Circulation_10_96a51b4d, Zone4-1Circulation_8_9174b363, Zone4-1Circulation_9_38599cc8"
+4,2,"Zone3-2_OpenOffice2_7_766444d3, Zone3-2_OpenOffice2_8_926623c5, Zone3-2_OpenOffice2_9_4fed6b2a, Zone7Shaft_2_b2a620fa"
+4,2staircase,Zone4-2Staircase_6_19647388
+4,Meeting,"Zone2-1_Meeting_10_e27bd287, Zone2-1_Meeting_11_5c47b32f, Zone2-1_Meeting_3_e0f9eaf5, Zone2-1_Meeting_9_c11314e3"
+4,Rrooms,Zone5_RRooms_3_e6801073
+4,Vrf,Zone8_VRF_2_3e05dfe5
+5,1,"Zone3-1_OpenOffice_2_4ccdc8a9, Zone7Shaft_1_9c1b22f0"
+5,1circulation,"Zone4-1Circulation_6_3b628755, Zone4-1Circulation_7_1151c2cf"
+5,2,"Zone3-2_OpenOffice2_4_86b91db7, Zone3-2_OpenOffice2_5_3c05eaa9, Zone3-2_OpenOffice2_6_f4b0a8b1"
+5,2staircase,Zone4-2Staircase_5_f3107a12
+5,Meeting,"Zone2-1_Meeting_2_0ab894be, Zone2-1_Meeting_6_8be16708, Zone2-1_Meeting_7_3c3f5d81, Zone2-1_Meeting_8_dbcf51aa"
+5,Rrooms,Zone5_RRooms_2_b0659170
+5,Vrf,Zone8_VRF_1_d09f2502
+6,Equipment,"Zone6_Equipment_1_1f202057, Zone6_Equipment_2_62d6b14e"
