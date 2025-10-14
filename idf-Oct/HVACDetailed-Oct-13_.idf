@@ -824,7 +824,7 @@ ZoneInfiltration:DesignFlowRate,
   Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
   ,                                       !- Design Flow Rate {m3/s}
   ,                                       !- Flow Rate per Floor Area {m3/s-m2}
-  0.0048,                                 !- Flow Rate per Exterior Surface Area {m3/s-m2}
+  0.00125, !-7th field
   ,                                       !- Air Changes per Hour {1/hr}
   1,                                      !- Constant Term Coefficient
   0,                                      !- Temperature Term Coefficient
@@ -43340,7 +43340,7 @@ Fan:ConstantVolume,
   NaturalVent,                            !- Availability Schedule Name
   0.55575,                                !- Fan Total Efficiency
   373.633365,                             !- Pressure Rise {Pa}
-  AutoSize,                               !- Maximum Flow Rate {m3/s}
+  0.2163, !-5th field
   0.855,                                  !- Motor Efficiency
   1,                                      !- Motor In Airstream Fraction
   AHU31 - 1 Zone DOAS Supply Inlet Node,  !- Air Inlet Node Name
@@ -43516,7 +43516,7 @@ Fan:ConstantVolume,
   NaturalVent,                            !- Availability Schedule Name
   0.55575,                                !- Fan Total Efficiency
   622.722275,                             !- Pressure Rise {Pa}
-  AutoSize,                               !- Maximum Flow Rate {m3/s}
+  0.2163, !-5th field
   0.855,                                  !- Motor Efficiency
   1,                                      !- Motor In Airstream Fraction
   1 Zone DOAS Htg Coil Outlet Air Node,   !- Air Inlet Node Name
@@ -43691,7 +43691,7 @@ Fan:ConstantVolume,
   NaturalVent,                            !- Availability Schedule Name
   0.55575,                                !- Fan Total Efficiency
   373.633365,                             !- Pressure Rise {Pa}
-  AutoSize,                               !- Maximum Flow Rate {m3/s}
+  0.2163, !-5th field
   0.855,                                  !- Motor Efficiency
   1,                                      !- Motor In Airstream Fraction
   26 Zone DOAS Supply Inlet Node,         !- Air Inlet Node Name
@@ -43867,7 +43867,7 @@ Fan:ConstantVolume,
   NaturalVent,                            !- Availability Schedule Name
   0.55575,                                !- Fan Total Efficiency
   622.722275,                             !- Pressure Rise {Pa}
-  AutoSize,                               !- Maximum Flow Rate {m3/s}
+  0.2163, !-5th field
   0.855,                                  !- Motor Efficiency
   1,                                      !- Motor In Airstream Fraction
   26 Zone DOAS Htg Coil Outlet Air Node,  !- Air Inlet Node Name
@@ -44092,7 +44092,7 @@ Fan:ConstantVolume,
   NaturalVent,                            !- Availability Schedule Name
   0.55575,                                !- Fan Total Efficiency
   373.633365,                             !- Pressure Rise {Pa}
-  AutoSize,                               !- Maximum Flow Rate {m3/s}
+  0.2163, !-5th field
   0.855,                                  !- Motor Efficiency
   1,                                      !- Motor In Airstream Fraction
   AHU33 - 35 Zone DOAS Supply Inlet Node, !- Air Inlet Node Name
@@ -44268,7 +44268,7 @@ Fan:ConstantVolume,
   NaturalVent,                            !- Availability Schedule Name
   0.55575,                                !- Fan Total Efficiency
   622.722275,                             !- Pressure Rise {Pa}
-  AutoSize,                               !- Maximum Flow Rate {m3/s}
+  0.2163, !-5th field
   0.855,                                  !- Motor Efficiency
   1,                                      !- Motor In Airstream Fraction
   35 Zone DOAS Htg Coil Outlet Air Node,  !- Air Inlet Node Name
@@ -47889,7 +47889,7 @@ OutputControl:Files,
   Yes,  ! MTR
   No, ! ESO
   No , ! EIO
-  No, ! Tabular
+  Yes, ! Tabular
   No , ! SQLite
   No , ! JSON
   No , ! AUDIT
@@ -47897,8 +47897,8 @@ OutputControl:Files,
   No , ! System Sizing
   No , ! DXF
   No , ! BND
-  Yes , ! RDD
-  Yes , ! MDD
+  No , ! RDD
+  No , ! MDD
   No , ! MTD
   No, ! END
   No , ! SHD

@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.10.13 16:38,
+Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.10.13 17:28,
    ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS OFF DISCRETE", Blank Schedule Type Limits Name input -- will not be validated.
    ************* Beginning Zone Sizing Calculations
    ** Warning ** Weather file location will be used rather than entered (IDF) Location object.
@@ -67,43 +67,43 @@ Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.10.13 16:38,
    ** Warning ** UpdateZoneSizing: Cooling supply air temperature (calculated) within 5C of zone temperature
    **   ~~~   ** ...check zone thermostat set point and design supply air temperatures
    **   ~~~   ** ...zone name = ZONE2-1_MEETING_2_0E073C3E
-   **   ~~~   ** ...design sensible cooling load = 70.71 W
+   **   ~~~   ** ...design sensible cooling load = 81.09 W
    **   ~~~   ** ...thermostat set point temp    = 35.000 C
    **   ~~~   ** ...zone temperature             = 15.000 C
    **   ~~~   ** ...supply air temperature       = 12.778 C
-   **   ~~~   ** ...temperature difference       = -2.22241 C
-   **   ~~~   ** ...calculated volume flow rate  = 2.55062E-002 m3/s
-   **   ~~~   ** ...calculated mass flow rate    = 3.05680E-002 kg/s
+   **   ~~~   ** ...temperature difference       = -2.22244 C
+   **   ~~~   ** ...calculated volume flow rate  = 2.92431E-002 m3/s
+   **   ~~~   ** ...calculated mass flow rate    = 3.50464E-002 kg/s
    ** Warning ** UpdateZoneSizing: Cooling supply air temperature (calculated) within 5C of zone temperature
    **   ~~~   ** ...check zone thermostat set point and design supply air temperatures
    **   ~~~   ** ...zone name = ZONE2-1_MEETING_6_75394D70
-   **   ~~~   ** ...design sensible cooling load = 5.05 W
+   **   ~~~   ** ...design sensible cooling load = 4.52 W
    **   ~~~   ** ...thermostat set point temp    = 35.000 C
    **   ~~~   ** ...zone temperature             = 15.002 C
    **   ~~~   ** ...supply air temperature       = 12.778 C
-   **   ~~~   ** ...temperature difference       = -2.22391 C
-   **   ~~~   ** ...calculated volume flow rate  = 1.78578E-003 m3/s
-   **   ~~~   ** ...calculated mass flow rate    = 2.14017E-003 kg/s
+   **   ~~~   ** ...temperature difference       = -2.22379 C
+   **   ~~~   ** ...calculated volume flow rate  = 1.60152E-003 m3/s
+   **   ~~~   ** ...calculated mass flow rate    = 1.91935E-003 kg/s
    ** Warning ** UpdateZoneSizing: Cooling supply air temperature (calculated) within 5C of zone temperature
    **   ~~~   ** ...check zone thermostat set point and design supply air temperatures
    **   ~~~   ** ...zone name = ZONE2-1_MEETING_7_F519F905
-   **   ~~~   ** ...design sensible cooling load = 4.57 W
+   **   ~~~   ** ...design sensible cooling load = 3.93 W
    **   ~~~   ** ...thermostat set point temp    = 35.000 C
-   **   ~~~   ** ...zone temperature             = 15.002 C
+   **   ~~~   ** ...zone temperature             = 15.006 C
    **   ~~~   ** ...supply air temperature       = 12.778 C
-   **   ~~~   ** ...temperature difference       = -2.22374 C
-   **   ~~~   ** ...calculated volume flow rate  = 1.61703E-003 m3/s
-   **   ~~~   ** ...calculated mass flow rate    = 1.93794E-003 kg/s
+   **   ~~~   ** ...temperature difference       = -2.22775 C
+   **   ~~~   ** ...calculated volume flow rate  = 1.39124E-003 m3/s
+   **   ~~~   ** ...calculated mass flow rate    = 1.66733E-003 kg/s
    ** Warning ** UpdateZoneSizing: Cooling supply air temperature (calculated) within 5C of zone temperature
    **   ~~~   ** ...check zone thermostat set point and design supply air temperatures
    **   ~~~   ** ...zone name = ZONE2-1_MEETING_8_3DE49B7E
-   **   ~~~   ** ...design sensible cooling load = 4.21 W
+   **   ~~~   ** ...design sensible cooling load = 5.21 W
    **   ~~~   ** ...thermostat set point temp    = 35.000 C
    **   ~~~   ** ...zone temperature             = 15.002 C
    **   ~~~   ** ...supply air temperature       = 12.778 C
-   **   ~~~   ** ...temperature difference       = -2.22381 C
-   **   ~~~   ** ...calculated volume flow rate  = 1.47940E-003 m3/s
-   **   ~~~   ** ...calculated mass flow rate    = 1.77299E-003 kg/s
+   **   ~~~   ** ...temperature difference       = -2.22394 C
+   **   ~~~   ** ...calculated volume flow rate  = 1.84553E-003 m3/s
+   **   ~~~   ** ...calculated mass flow rate    = 2.21178E-003 kg/s
    ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_10_7739E39B is zero.
    **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
    ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_11_8851A81F is zero.
@@ -194,195 +194,195 @@ Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.10.13 16:38,
    ************* Beginning Plant Sizing Calculations
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE2-1_MEETING_1_ECA3B0F8 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.36031 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.36022 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE2-1_MEETING_1_ECA3B0F8 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE2-1_MEETING_2_0E073C3E FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.41338 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.41336 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE2-1_MEETING_2_0E073C3E FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeWaterCoil: Coil="ZONE2-1_MEETING_2_0E073C3E FCU COOLING COIL", Cooling Coil has leaving humidity ratio > entering humidity ratio.
-   **   ~~~   **     Wair,in =  7.117082E-003 [kgWater/kgDryAir]
+   **   ~~~   **     Wair,in =  7.162646E-003 [kgWater/kgDryAir]
    **   ~~~   **     Wair,out = 8.500000E-003 [kgWater/kgDryAir]
    **   ~~~   ** ....coil leaving humidity ratio will be reset to:
-   **   ~~~   **     Wair,out = 7.117082E-003 [kgWater/kgDryAir]
+   **   ~~~   **     Wair,out = 7.162646E-003 [kgWater/kgDryAir]
    ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE2-1_MEETING_2_0E073C3E FCU COOLING COIL
    **   ~~~   **   Bad starting values for UA
-   **   ~~~   **  Coil design UA set to 226.524061 [W/C]
+   **   ~~~   **  Coil design UA set to 226.539631 [W/C]
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE2-1_MEETING_3_3B5615BF FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.36566 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.36562 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE2-1_MEETING_3_3B5615BF FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE2-1_MEETING_4_154BF8BC FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.36260 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.36256 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE2-1_MEETING_4_154BF8BC FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE2-1_MEETING_5_B7A8E0C3 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.36194 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.36190 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE2-1_MEETING_5_B7A8E0C3 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeWaterCoil: Coil="ZONE2-1_MEETING_6_75394D70 FCU COOLING COIL", Cooling Coil has leaving humidity ratio > entering humidity ratio.
-   **   ~~~   **     Wair,in =  2.381925E-003 [kgWater/kgDryAir]
+   **   ~~~   **     Wair,in =  2.350007E-003 [kgWater/kgDryAir]
    **   ~~~   **     Wair,out = 8.500000E-003 [kgWater/kgDryAir]
    **   ~~~   ** ....coil leaving humidity ratio will be reset to:
-   **   ~~~   **     Wair,out = 2.381925E-003 [kgWater/kgDryAir]
+   **   ~~~   **     Wair,out = 2.350007E-003 [kgWater/kgDryAir]
    ** Warning ** SizeWaterCoil: Coil="ZONE2-1_MEETING_7_F519F905 FCU COOLING COIL", Cooling Coil has leaving humidity ratio > entering humidity ratio.
-   **   ~~~   **     Wair,in =  2.340257E-003 [kgWater/kgDryAir]
+   **   ~~~   **     Wair,in =  2.331305E-003 [kgWater/kgDryAir]
    **   ~~~   **     Wair,out = 8.500000E-003 [kgWater/kgDryAir]
    **   ~~~   ** ....coil leaving humidity ratio will be reset to:
-   **   ~~~   **     Wair,out = 2.340257E-003 [kgWater/kgDryAir]
+   **   ~~~   **     Wair,out = 2.331305E-003 [kgWater/kgDryAir]
    ** Warning ** SizeWaterCoil: Coil="ZONE2-1_MEETING_8_3DE49B7E FCU COOLING COIL", Cooling Coil has leaving humidity ratio > entering humidity ratio.
-   **   ~~~   **     Wair,in =  2.770556E-003 [kgWater/kgDryAir]
+   **   ~~~   **     Wair,in =  2.392393E-003 [kgWater/kgDryAir]
    **   ~~~   **     Wair,out = 8.500000E-003 [kgWater/kgDryAir]
    **   ~~~   ** ....coil leaving humidity ratio will be reset to:
-   **   ~~~   **     Wair,out = 2.770556E-003 [kgWater/kgDryAir]
+   **   ~~~   **     Wair,out = 2.392393E-003 [kgWater/kgDryAir]
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE2-2SEMINAR_D779CA07 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.44596 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.44515 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE2-2SEMINAR_D779CA07 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-1_OPENOFFICE_1_9FEE57E6 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.66590 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.64141 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-1_OPENOFFICE_1_9FEE57E6 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-1_OPENOFFICE_2_110E1EF3 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.81240 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.80676 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-1_OPENOFFICE_2_110E1EF3 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-1_OPENOFFICE_3_5765BE82 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.67272 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.65439 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-1_OPENOFFICE_3_5765BE82 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-1_OPENOFFICE_4_DA0DF4CB FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.65675 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.63488 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-1_OPENOFFICE_4_DA0DF4CB FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-1_OPENOFFICE_5_09EEACDA FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.65503 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.63346 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-1_OPENOFFICE_5_09EEACDA FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_10_B9C5C1E2 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.36132 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.35482 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_10_B9C5C1E2 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_11_E9A9F9C3 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.68538 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.66398 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_11_E9A9F9C3 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_12_5847D1C6 FCU COOLING COIL
    **   ~~~   **   Bad starting values for UA
-   **   ~~~   **  Coil design UA set to 469.760419 [W/C]
+   **   ~~~   **  Coil design UA set to 461.084614 [W/C]
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_13_3028A123 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.82274 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.82262 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_13_3028A123 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_14_E2D86807 FCU COOLING COIL
    **   ~~~   **   Bad starting values for UA
-   **   ~~~   **  Coil design UA set to 491.807607 [W/C]
+   **   ~~~   **  Coil design UA set to 490.134631 [W/C]
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_15_CC8116DD FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.73191 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.72001 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_15_CC8116DD FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_16_ADF85EEC FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.36078 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.35107 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_16_ADF85EEC FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_17_2225E337 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.70953 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.69576 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_17_2225E337 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_18_C00ED735 FCU COOLING COIL
    **   ~~~   **   Bad starting values for UA
-   **   ~~~   **  Coil design UA set to 595.101163 [W/C]
+   **   ~~~   **  Coil design UA set to 594.101277 [W/C]
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_19_923A5F36 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.67271 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.66367 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_19_923A5F36 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_1_ECE2C271 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.36807 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.36219 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_1_ECE2C271 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_2_5518A8FC FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.69503 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.68873 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_2_5518A8FC FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_3_C814639C FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.48484 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.48209 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_3_C814639C FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_4_DF3F73FF FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.46713 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.46695 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_4_DF3F73FF FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_5_2A12DE25 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.90062 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.90027 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_5_2A12DE25 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_6_9B68752E FCU COOLING COIL
    **   ~~~   **   Bad starting values for UA
-   **   ~~~   **  Coil design UA set to 755.110090 [W/C]
+   **   ~~~   **  Coil design UA set to 752.313175 [W/C]
    ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_7_76C03369 FCU COOLING COIL
    **   ~~~   **   Bad starting values for UA
-   **   ~~~   **  Coil design UA set to 491.511726 [W/C]
+   **   ~~~   **  Coil design UA set to 489.625604 [W/C]
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_8_104F9EB4 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.76089 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.75014 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_8_104F9EB4 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-2_OPENOFFICE2_9_6C3225F9 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 0.37382 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 0.36756 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-2_OPENOFFICE2_9_6C3225F9 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
    ** Warning ** SizeFanCoilUnit: ZoneHVAC:FourPipeFanCoil: ZONE3-3_LAB_23607840 FCU
    **   ~~~   ** ... Maximum supply air flow rate is greater than the maximum fan flow rate.
-   **   ~~~   ** ... Fan Coil Unit flow = 1.14541 [m3/s].
+   **   ~~~   ** ... Fan Coil Unit flow = 1.10346 [m3/s].
    **   ~~~   ** ... Fan = Fan:OnOff: ZONE3-3_LAB_23607840 FAN COIL FAN
    **   ~~~   ** ... Fan flow = 0.33000 [m3/s].
    **   ~~~   ** ... Fan Coil Unit flow rate reduced to match the fan flow rate and the simulation continues.
@@ -532,9 +532,9 @@ Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.10.13 16:38,
    ************* Testing Individual Return Air Path Integrity
    ************* All Return Air Paths passed integrity testing
    ************* No node connection errors were found.
-   ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Tower range temperature is outside model boundaries at 1.83E-002.
-   **   ~~~   **  ...Valid range = 1.11 to 11.11. Occurrence info = EDINBURGH.AP ANN CLG .4% CONDNS DB=>MWB HVAC Sizing Pass 1, 07/21 00:00 - 00:05
-   **   ~~~   **  ...Tower range temperature passed to the model = 1.83405E-002
+   ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Tower range temperature is outside model boundaries at 2.81E-002.
+   **   ~~~   **  ...Valid range = 1.11 to 11.11. Occurrence info = EDINBURGH.AP ANN CLG .4% CONDNS DB=>MWB HVAC Sizing Pass 1, 07/21 00:05 - 00:10
+   **   ~~~   **  ...Tower range temperature passed to the model = 2.80557E-002
    **   ~~~   **  ...Range temperatures outside model boundaries may not adversely affect tower performance.
    **   ~~~   **  ...This is not an unexpected occurrence when simulating actual conditions.
    ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Tower approach temperature is outside model boundaries at 11.12.
@@ -548,7 +548,7 @@ Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.10.13 16:38,
    **   ~~~   **  ...Inlet air wet-bulb temperature passed to the model = -1.000000
    **   ~~~   **  ...Wet-bulb temperatures outside model boundaries may not adversely affect tower performance.
    ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Inlet air wet-bulb temperature is outside model boundaries at -1.00.
-   **   ~~~   **  ...Valid range = -1.00 to 26.67. Occurrence info = RUN PERIOD 1, 03/08 10:13 - 10:17
+   **   ~~~   **  ...Valid range = -1.00 to 26.67. Occurrence info = RUN PERIOD 1, 03/08 10:10 - 10:13
    **   ~~~   **  ...Inlet air wet-bulb temperature passed to the model = -1.000000
    **   ~~~   **  ...Wet-bulb temperatures outside model boundaries may not adversely affect tower performance.
    ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-ELECTRICITY" has no energy cost. 
@@ -580,13 +580,13 @@ Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.10.13 16:38,
    ************* The following recurring error messages occurred.
    *************
    *************  ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Tower range temperature is out of range error continues...
-   *************  **   ~~~   **   This error occurred 38633 total times;
+   *************  **   ~~~   **   This error occurred 38064 total times;
    *************  **   ~~~   **   during Warmup 0 times;
    *************  **   ~~~   **   during Sizing 0 times.
-   *************  **   ~~~   **   Max=1.111040  Min=0.000011
+   *************  **   ~~~   **   Max=1.110823  Min=0.000011
    *************
    *************  ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Tower approach temperature is out of range error continues...
-   *************  **   ~~~   **   This error occurred 14924 total times;
+   *************  **   ~~~   **   This error occurred 15413 total times;
    *************  **   ~~~   **   during Warmup 0 times;
    *************  **   ~~~   **   during Sizing 0 times.
    *************  **   ~~~   **   Max=22.153285  Min=11.111111
@@ -601,4 +601,4 @@ Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.10.13 16:38,
    *************
    ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
    ************* EnergyPlus Sizing Error Summary. During Sizing: 95 Warning; 0 Severe Errors.
-   ************* EnergyPlus Completed Successfully-- 53747 Warning; 7 Severe Errors; Elapsed Time=00hr 05min  2.52sec
+   ************* EnergyPlus Completed Successfully-- 53667 Warning; 7 Severe Errors; Elapsed Time=00hr 06min 47.90sec
