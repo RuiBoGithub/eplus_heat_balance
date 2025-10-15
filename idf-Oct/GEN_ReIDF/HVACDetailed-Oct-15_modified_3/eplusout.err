@@ -1,0 +1,432 @@
+Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2025.10.15 16:26,
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS OFF DISCRETE", Blank Schedule Type Limits Name input -- will not be validated.
+   ************* Beginning Zone Sizing Calculations
+   ** Warning ** Weather file location will be used rather than entered (IDF) Location object.
+   **   ~~~   ** ..Location object=SITE 1
+   **   ~~~   ** ..Weather File Location=Edinburgh.AP SCT GBR SRC-TMYx WMO#=031600
+   **   ~~~   ** ..due to location differences, Latitude difference=[55.95] degrees, Longitude difference=[3.37] degrees.
+   **   ~~~   ** ..Time Zone difference=[0.0] hour(s), Elevation difference=[4110.00] percent, [41.10] meters.
+   ** Warning ** GetHTSurfaceData: Surfaces with interface to Ground found but no "Ground Temperatures" were input.
+   **   ~~~   ** Found first in surface=ZONE1-2_CAFE_B7087838..FACE13
+   **   ~~~   ** Defaults, constant throughout the year of (18.0) will be used.
+   ** Warning ** CheckUsedConstructions: There are 19 nominally unused constructions in input.
+   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;
+   ** Warning ** DetermineShadowingCombinations: There are 8 surfaces which are receiving surfaces and are non-convex.
+   **   ~~~   ** ...Shadowing values may be inaccurate. Check .shd report file for more surface shading details
+   **   ~~~   ** ...Add Output:Diagnostics,DisplayExtraWarnings; to see individual warnings for each surface.
+   ** Severe  ** DetermineShadowingCombinations: There are 1 surfaces which are casting surfaces and are non-convex.
+   **   ~~~   ** ...Shadowing values may be inaccurate. Check .shd report file for more surface shading details
+   **   ~~~   ** ...Add Output:Diagnostics,DisplayExtraWarnings; to see individual severes for each surface.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_9_E7382F72_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_10_A8B99228_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_11_6F14E408_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_12_54DC2219_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_13_C4C8ECE5_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_14_B84B121D_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_15_5C18A09A_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_16_37A03407_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_17_DB4A7616_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_18_E81EFB3A_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_19_7C83DA0A_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE2-1_MEETING_20_E0128584_SPACE INFTR_OFFICE-M-C_BR_ 6", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE4-1CIRCULATION_9_5F870E06_SPACE INFTR_OFFICE-M-C_BR_ 2", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE4-1CIRCULATION_1_93651DFB_SPACE INFTR_OFFICE-M-C_BR_ 2", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE4-1CIRCULATION_6_06DE1587_SPACE INFTR_OFFICE-M-C_BR_ 2", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE4-1CIRCULATION_14_25697B73_SPACE INFTR_OFFICE-M-C_BR_ 2", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE4-1CIRCULATION_15_950CA918_SPACE INFTR_OFFICE-M-C_BR_ 2", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE4-2STAIRCASE_2_0181E855_SPACE INFTR_OFFICE-M-C_BR_ 8", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE4-2STAIRCASE_3_2BB9ED45_SPACE INFTR_OFFICE-M-C_BR_ 8", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE4-2STAIRCASE_7_46A80C56_SPACE INFTR_OFFICE-M-C_BR_ 8", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE4-2STAIRCASE_4_D2365F94_SPACE INFTR_OFFICE-M-C_BR_ 8", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE4-2STAIRCASE_6_54A3C313_SPACE INFTR_OFFICE-M-C_BR_ 8", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE4-2STAIRCASE_9_4C0E299E_SPACE INFTR_OFFICE-M-C_BR_ 8", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE5_RROOMS_6_3E905C74_SPACE INFTR_OFFICE-M-C_BR_ 9", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE6_EQUIPMENT_3_BC710A97_SPACE INFTR_OFFICE-M-C_BR_ 1", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE7SHAFT_3_6735B33C_SPACE INFTR_OFFICE-M-C_BR_ 3", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE7SHAFT_2_6C6D5AF7_SPACE INFTR_OFFICE-M-C_BR_ 3", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE7SHAFT_4_265B4D96_SPACE INFTR_OFFICE-M-C_BR_ 3", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE7SHAFT_5_AFCEFB5C_SPACE INFTR_OFFICE-M-C_BR_ 3", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE8_VRF_4_08ACE19D_SPACE INFTR_OFFICE-M-C_BR_ 4", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE8_VRF_3_90D5FD63_SPACE INFTR_OFFICE-M-C_BR_ 4", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE8_VRF_2_842C1F6D_SPACE INFTR_OFFICE-M-C_BR_ 4", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE9STORE_2_E0FABE03_SPACE INFTR_OFFICE-M-C_BR_ 11", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetSimpleAirModelInputs: ZoneInfiltration:DesignFlowRate="ZONE9STORE_1_86A1F86A_SPACE INFTR_OFFICE-M-C_BR_ 11", Design Flow Rate Calculation Method specifies Flow Rate per Exterior Surface Area, but Exterior Surface Area = 0.  0 Infiltration will result.
+   ** Warning ** GetElectricEIRChillerInput: Chiller:Electric:EIR="90.1-2019 WATERCOOLED  ROTARY SCREW CHILLER 0"
+   **   ~~~   ** Energy input ratio as a function of temperature curve output is not equal to 1.0 (+ or - 10%) at reference conditions.
+   **   ~~~   ** Curve output at reference conditions = 1.205
+   ** Warning ** SetUpZoneSizingArrays: Requested Sizing for Zone="ZONE7SHAFT_1_08E6B32F", Zone has no thermostat (ref: ZoneControl:Thermostat, et al)
+   ** Warning ** SetUpZoneSizingArrays: Requested Sizing for Zone="ZONE7SHAFT_2_6C6D5AF7", Zone has no thermostat (ref: ZoneControl:Thermostat, et al)
+   ** Warning ** SetUpZoneSizingArrays: Requested Sizing for Zone="ZONE7SHAFT_3_6735B33C", Zone has no thermostat (ref: ZoneControl:Thermostat, et al)
+   ** Warning ** SetUpZoneSizingArrays: Requested Sizing for Zone="ZONE7SHAFT_4_265B4D96", Zone has no thermostat (ref: ZoneControl:Thermostat, et al)
+   ** Warning ** SetUpZoneSizingArrays: Requested Sizing for Zone="ZONE7SHAFT_5_AFCEFB5C", Zone has no thermostat (ref: ZoneControl:Thermostat, et al)
+   ** Warning ** SetUpZoneSizingArrays: Requested Sizing for Zone="ZONE7SHAFT_6_89823FD1", Zone has no thermostat (ref: ZoneControl:Thermostat, et al)
+   ** Warning ** SetUpZoneSizingArrays: Requested Sizing for Zone="ZONE9STORE_1_86A1F86A", Zone has no thermostat (ref: ZoneControl:Thermostat, et al)
+   ** Warning ** SetUpZoneSizingArrays: Requested Sizing for Zone="ZONE9STORE_2_E0FABE03", Zone has no thermostat (ref: ZoneControl:Thermostat, et al)
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_10_43A0A844 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_11_BC05085B is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_12_B98E16D5 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_13_7ECA07C1 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_14_25697B73 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_15_950CA918 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_16_329C1247 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_1_93651DFB is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_2_0EB92D27 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_3_8555B565 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_4_C99ECD77 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_5_86CA05CB is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_6_06DE1587 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_7_10FADE15 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_8_FFA3E1D7 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-1CIRCULATION_9_5F870E06 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-2STAIRCASE_10_4388185D is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-2STAIRCASE_11_D9646739 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-2STAIRCASE_1_BFFD266D is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-2STAIRCASE_2_0181E855 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-2STAIRCASE_3_2BB9ED45 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-2STAIRCASE_4_D2365F94 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-2STAIRCASE_5_8686E737 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-2STAIRCASE_6_54A3C313 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-2STAIRCASE_7_46A80C56 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-2STAIRCASE_8_0EF22E45 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE4-2STAIRCASE_9_4C0E299E is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE7SHAFT_1_08E6B32F is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=ZONE7SHAFT_1_08E6B32F is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE7SHAFT_2_6C6D5AF7 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=ZONE7SHAFT_2_6C6D5AF7 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE7SHAFT_3_6735B33C is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=ZONE7SHAFT_3_6735B33C is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE7SHAFT_4_265B4D96 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=ZONE7SHAFT_4_265B4D96 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE7SHAFT_5_AFCEFB5C is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=ZONE7SHAFT_5_AFCEFB5C is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE7SHAFT_6_89823FD1 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=ZONE7SHAFT_6_89823FD1 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE9STORE_1_86A1F86A is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=ZONE9STORE_1_86A1F86A is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design cooling load for zone=ZONE9STORE_2_E0FABE03 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=ZONE9STORE_2_E0FABE03 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ************* Beginning System Sizing Calculations
+   ************* Beginning Plant Sizing Calculations
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-1_OPENOFFICE_2_4889CEE4 FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 1437.034199 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_12_A7E98F5D FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 408.864749 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_13_BD0BDF3D FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 1583.870533 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_14_FCCAED73 FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 426.729202 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_17_3057E27E FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 1250.939556 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_18_70DE976D FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 490.459351 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_1_54ABF7A5 FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 646.345016 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_2_16DE1324 FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 1229.592000 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_3_91340BB6 FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 863.496111 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_4_EC99DF50 FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 969.396547 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_5_D67EAD0A FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 1738.699757 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_6_405A91FF FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 628.506877 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_7_772531FB FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 427.210959 [W/C]
+   ** Severe  ** Calculation of cooling coil design UA failed for coil ZONE3-2_OPENOFFICE2_9_8435A361 FCU COOLING COIL
+   **   ~~~   **   Bad starting values for UA
+   **   ~~~   **  Coil design UA set to 669.359338 [W/C]
+   ** Warning ** SizeWaterCoil: Coil="ZONE8_VRF_2_842C1F6D FCU COOLING COIL", Cooling Coil has leaving humidity ratio > entering humidity ratio.
+   **   ~~~   **     Wair,in =  8.500000E-003 [kgWater/kgDryAir]
+   **   ~~~   **     Wair,out = 8.500000E-003 [kgWater/kgDryAir]
+   **   ~~~   ** ....coil leaving humidity ratio will be reset to:
+   **   ~~~   **     Wair,out = 8.500000E-003 [kgWater/kgDryAir]
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_10_A8B99228".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_11_6F14E408".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_12_54DC2219".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_13_C4C8ECE5".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_14_B84B121D".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_15_5C18A09A".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_16_37A03407".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_17_DB4A7616".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_18_E81EFB3A".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_19_7C83DA0A".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_1_CA083A3D".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_20_E0128584".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_2_2C30E161".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_3_EA0ED789".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_4_4410E019".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_5_7FC245AB".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_6_4CD638BF".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_7_8B21235B".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_8_153CE1A0".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-1_MEETING_9_E7382F72".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-1_OPENOFFICE_1_F45F29BE".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-1_OPENOFFICE_2_4889CEE4".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-1_OPENOFFICE_3_FADC0F2F".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-1_OPENOFFICE_4_069EA6BF".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-1_OPENOFFICE_5_ED34D8E9".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="26 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-3_LAB_883D550B".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="1 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE2-2SEMINAR_B0F87E12".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_10_CCEEABED".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_11_8F6EA286".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_12_A7E98F5D".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_13_BD0BDF3D".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_14_FCCAED73".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_15_2CAF94D5".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_16_7593F781".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_17_3057E27E".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_18_70DE976D".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_19_941B6283".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_1_54ABF7A5".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_2_16DE1324".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_3_91340BB6".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_4_EC99DF50".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_5_D67EAD0A".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_6_405A91FF".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_7_772531FB".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_8_6FB06E11".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** GetOAControllerInputs: Controller:MechanicalVentilation="35 ZONE DOAS MECHANICAL VENTILATION CONTROLLER"
+   **   ~~~   ** Cannot locate a matching DesignSpecification:ZoneAirDistribution object for Zone="ZONE3-2_OPENOFFICE2_9_8435A361".
+   **   ~~~   ** Using default zone air distribution effectiveness of 1.0 for heating and cooling.
+   ** Warning ** Output:Meter:MeterFileOnly: invalid Key Name="HEATING:ELECTRICITY" - not found.
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Tower range temperature is outside model boundaries at 9.71E-003.
+   **   ~~~   **  ...Valid range = 1.11 to 11.11. Occurrence info = EDINBURGH.AP ANN CLG .4% CONDNS DB=>MWB HVAC Sizing Pass 1, 07/21 00:00 - 00:05
+   **   ~~~   **  ...Tower range temperature passed to the model = 9.70542E-003
+   **   ~~~   **  ...Range temperatures outside model boundaries may not adversely affect tower performance.
+   **   ~~~   **  ...This is not an unexpected occurrence when simulating actual conditions.
+   ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Tower approach temperature is outside model boundaries at 11.12.
+   **   ~~~   **  ...Valid range = 1.11 to 11.11. Occurrence info = EDINBURGH.AP APRIL .4% CONDNS DB=>MCWB HVAC Sizing Pass 1, 04/21 00:40 - 00:50
+   **   ~~~   **  ...Tower approach temperature passed to the model = 11.11916
+   **   ~~~   **  ...Approach temperatures outside model boundaries may not adversely affect tower performance.
+   **   ~~~   **  ...This is not an unexpected occurrence when simulating actual conditions.
+   ************* Beginning Simulation
+   ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Inlet air wet-bulb temperature is outside model boundaries at -1.14.
+   **   ~~~   **  ...Valid range = -1.00 to 26.67. Occurrence info = RUN PERIOD 1, 01/19 09:27 - 09:30
+   **   ~~~   **  ...Inlet air wet-bulb temperature passed to the model = -1.000000
+   **   ~~~   **  ...Wet-bulb temperatures outside model boundaries may not adversely affect tower performance.
+   ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Inlet air wet-bulb temperature is outside model boundaries at -1.38.
+   **   ~~~   **  ...Valid range = -1.00 to 26.67. Occurrence info = RUN PERIOD 1, 01/20 09:08 - 09:10
+   **   ~~~   **  ...Inlet air wet-bulb temperature passed to the model = -1.000000
+   **   ~~~   **  ...Wet-bulb temperatures outside model boundaries may not adversely affect tower performance.
+   ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Inlet air wet-bulb temperature is outside model boundaries at -1.25.
+   **   ~~~   **  ...Valid range = -1.00 to 26.67. Occurrence info = RUN PERIOD 1, 01/20 09:17 - 09:20
+   **   ~~~   **  ...Inlet air wet-bulb temperature passed to the model = -1.000000
+   **   ~~~   **  ...Wet-bulb temperatures outside model boundaries may not adversely affect tower performance.
+   ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Inlet air wet-bulb temperature is outside model boundaries at -1.12.
+   **   ~~~   **  ...Valid range = -1.00 to 26.67. Occurrence info = RUN PERIOD 1, 01/20 09:25 - 09:30
+   **   ~~~   **  ...Inlet air wet-bulb temperature passed to the model = -1.000000
+   **   ~~~   **  ...Wet-bulb temperatures outside model boundaries may not adversely affect tower performance.
+   ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Inlet air wet-bulb temperature is outside model boundaries at -1.18.
+   **   ~~~   **  ...Valid range = -1.00 to 26.67. Occurrence info = RUN PERIOD 1, 03/07 09:03 - 09:07
+   **   ~~~   **  ...Inlet air wet-bulb temperature passed to the model = -1.000000
+   **   ~~~   **  ...Wet-bulb temperatures outside model boundaries may not adversely affect tower performance.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-ELECTRICITY" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-DISTILLATE OIL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-RESIDUAL OIL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-NATURAL GAS" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-COAL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ************* Simulation Error Summary *************
+   ** Warning ** The following Report Variables were requested but not generated -- check.rdd file
+   **   ~~~   ** Either the IDF did not contain these elements, the variable name is misspelled,
+   **   ~~~   ** or the requested variable is an advanced output which requires Output : Diagnostics, DisplayAdvancedReportVariables;
+   ************* Key=*, VarName=ZONE AIR HEAT BALANCE DEVIATION RATE, Frequency=Hourly
+   ************* There are 1 unused objects in input.
+   ************* Use Output:Diagnostics,DisplayUnusedObjects; to see them.
+   ************* There are 2 unused schedules in input.
+   ************* There are 2 unused week schedules in input.
+   ************* There are 199 unused day schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   ** Warning ** Native CSV output requested in input file, but running ReadVarsESO due to command line argument.
+   ** Warning ** This will overwrite the native CSV output.
+   *************
+   ************* ===== Recurring Error Summary =====
+   ************* The following recurring error messages occurred.
+   *************
+   *************  ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Tower range temperature is out of range error continues...
+   *************  **   ~~~   **   This error occurred 41231 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=1.110989  Min=0.000011
+   *************
+   *************  ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Tower approach temperature is out of range error continues...
+   *************  **   ~~~   **   This error occurred 24595 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=23.446739  Min=11.111111
+   *************
+   *************  ** Warning ** CoolingTower:VariableSpeed "PROPELLER OR AXIAL VARIABLE SPEED FAN OPEN COOLING TOWER" - Inlet air wet-bulb temperature is out of range error continues...
+   *************  **   ~~~   **   This error occurred 78 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-1.001062  Min=-2.335628
+   *************
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 90 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 66063 Warning; 15 Severe Errors; Elapsed Time=00hr 05min 32.81sec

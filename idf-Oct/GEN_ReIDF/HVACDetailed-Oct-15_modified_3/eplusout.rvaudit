@@ -1,0 +1,13 @@
+ ReadVarsESO
+ processing:C:\Users\s2589602\Downloads\2025\src\eplus_heat_balance\idf-Oct\GEN_ReIDF\HVACDetailed-Oct-15_modified_3.rvi
+ Requested ESO file=C:\Users\s2589602\Downloads\2025\src\eplus_heat_balance\idf-Oct\GEN_ReIDF\HVACDetailed-Oct-15_modified_3\eplusout.eso
+ does not exist.  ReadVarsESO program terminated.
+ ReadVarsESO program terminated.
+ ReadVarsESO
+ processing:C:\Users\s2589602\Downloads\2025\src\eplus_heat_balance\idf-Oct\GEN_ReIDF\HVACDetailed-Oct-15_modified_3.mvi
+ input file:C:\Users\s2589602\Downloads\2025\src\eplus_heat_balance\idf-Oct\GEN_ReIDF\HVACDetailed-Oct-15_modified_3\eplusout.mtr
+ output file:C:\Users\s2589602\Downloads\2025\src\eplus_heat_balance\idf-Oct\GEN_ReIDF\HVACDetailed-Oct-15_modified_3\eplusmtr.csv
+ getting all vars from:C:\Users\s2589602\Downloads\2025\src\eplus_heat_balance\idf-Oct\GEN_ReIDF\HVACDetailed-Oct-15_modified_3\eplusout.mtr
+  number variables requested for output=          11
+ ReadVars Run Time=00hr 00min  0.31sec
+ ReadVarsESO program completed successfully.
