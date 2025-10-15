@@ -158,7 +158,10 @@ def load_long(
         raise ValueError("Expected 'Date/Time' column not found.")
     df["Date/Time"] = df["Date/Time"].apply(lambda s: parse_eplus_datetime(s, default_year=assume_year))
     df = df.dropna(subset=["Date/Time"])
-
+    
+    keep_cols = ["Date/Time"] + [c for c in df.columns
+                                 if "heat balance" in str(c).lower()]
+    df = df.loc[:, [c for c in keep_cols if c in df.columns]]
     zonevar_cols = [c for c in df.columns if ":" in str(c)]
     df_zonevars = df[["Date/Time"] + zonevar_cols].copy()
 

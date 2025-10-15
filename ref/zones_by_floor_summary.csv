@@ -93,6 +93,6 @@ Zone4-2Staircase_3_cad931a6,18.5,5,[5],1,False,91
 Zone5_RRooms_1_9ae4908e,18.5,5,[5],1,False,92
 Zone7Shaft_1_fdb86ad9,18.5,5,[5],1,False,93
 Zone8_VRF_1_f76cef6a,18.5,5,[5],1,False,94
-Zone1-1_Atrium_6a8d9a73,22.0,6,"[0, 4, 5, 6]",4,True,95
+Zone1-1_Atrium_6a8d9a73,22.0,0,"[0, 4, 5, 6]",4,True,95
 Zone6_Equipment_1_8cbd7810,22.0,6,[6],1,False,96
 Zone6_Equipment_2_ef97933c,22.0,6,[6],1,False,97
